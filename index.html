@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AI CHATBOT</title>
+    <title>BotBae - AI CHATBOT</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,6 +29,18 @@
                     Smart. Sassy. At your service.
                 </p>
             </div>
+            <!-- Dropdown -->
+            <div class="dropdown-container">
+                <button id="dropBtn">📚 Topics</button>
+                <div id="myDropdown">
+                    <a href="#" onclick="quickReply('cpu')">💻 CPU</a>
+                    <a href="#" onclick="quickReply('python')">🐍 Python</a>
+                    <a href="#" onclick="quickReply('react')">⚛️ React</a>
+                    <a href="#" onclick="quickReply('docker')">🐳 Docker</a>
+                    <a href="#" onclick="quickReply('ai')">🤖 AI</a>
+                    <a href="#" onclick="quickReply('help')">❓ Help</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -36,23 +48,21 @@
     <div class="chat-container">
         <div class="messages-wrapper">
             <div class="messages" id="messages">
-                <!-- Welcome message -->
+                <!-- KEEP YOUR EXISTING WELCOME MESSAGE -->
                 <div class="message bot-message fade-in">
                     <div class="message-content">
-                        <p>Hello! I’m your tech buddy. Ask me anything!</p>
+                        <p>Hello! I'm your tech buddy. Ask me anything!</p>
                         <span class="timestamp">Just now</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Typing Indicator (hidden by default) -->
+        <!-- Typing Indicator -->
         <div class="typing-indicator" id="typingIndicator" style="display: none;">
             <div class="typing-content">
                 <div class="typing-dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </div>
                 <p>BotBae is thinking...</p>
             </div>
@@ -62,24 +72,18 @@
     <!-- Input Area -->
     <div class="input-container">
         <div class="input-wrapper personal-style">
-            <input 
-                type="text" 
-                id="userInput" 
-                placeholder="Hiee, Ask me anything!" 
-                autocomplete="off"
-            >
+            <input type="text" id="userInput" placeholder="Hiee, Ask me anything!" autocomplete="off">
             <button id="sendBtn" class="send-btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span>Drop</span>
+                <span>Send</span>
             </button>
         </div>
-        <p class="input-hint">I’m smart… but errors happen sometimes, fr fr</p>
+        <p class="input-hint">Try: CPU, Python, React, Docker, AI or click 📚 Topics</p>
     </div>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
